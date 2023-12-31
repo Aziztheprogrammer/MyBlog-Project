@@ -1,0 +1,168 @@
+@import "Helpers/_mixins.scss";
+
+// Global Settings
+$theme: "light";
+$main-color: #1c1c1c;
+$bg-color: #f1f1f1;
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: $main-color;
+	background-color: $bg-color;
+}
+
+// Start Header
+header {
+	width: 100%;
+
+	> .container {
+		@include container;
+		@include fb(row, space-between, center, 16px);
+
+		.logo {
+			padding: 16px 0px;
+			font-weight: 400;
+			font-size: 1.4rem;
+		}
+
+		.theme {
+			font-size: 1.2rem;
+
+			> input {
+				appearance: none;
+			}
+
+			label {
+				// Icon Appearence
+				@if $theme == "light" {
+					> .fa-moon {
+						display: inline-block;
+					}
+
+					> .fa-sun {
+						display: none;
+					}
+				} @else {
+					> .fa-moon {
+						display: none;
+					}
+
+					> .fa-sun {
+						display: inline-block;
+					}
+				}
+
+				> i {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+// End Header
+
+// Start Profile
+section.profile {
+	width: 100%;
+
+	> .container {
+		@include container;
+
+		.banner {
+			background: url("../images/banner.webp") no-repeat center center;
+			background-size: cover;
+			min-height: 300px;
+			position: relative;
+
+			> img {
+				border-radius: 50%;
+				border: 10px $bg-color solid;
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+				translate: -50% 50%;
+				aspect-ratio: 1 / 1;
+				width: 110px;
+				object-fit: cover;
+			}
+		}
+
+		.info {
+			padding: 80px 0px 40px 0px;
+			@include fb(column, flex-start, center, 8px);
+			position: relative;
+			text-align: center;
+
+			&:after {
+				content: "";
+				height: 1px;
+				width: 100%;
+				background-color: $main-color;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				opacity: 0.4;
+
+			}
+
+			> span {
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+
+			> .social-links {
+				@include fb(row, center, center, 8px);
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+// End Profile Section
+
+// Start Articles Section
+section.articles {
+	width: 100%;
+	padding: 32px 0px;
+
+	> .container {
+		@include container;
+
+		> .title {
+			font-weight: 500;
+			font-size: 2.078rem;
+		}
+
+		> .articles {
+			margin-top: 32px;
+			@include gtc(220px, 48px);
+
+			> div {
+				@include fb(column, flex-start, flex-start, 8px);
+
+				> img {
+					aspect-ratio: 4 / 3;
+					object-fit: cover;
+				}
+
+				> span {
+					font-weight: 500;
+					font-size: 1.2rem;
+				}
+
+				> p {
+					font-size: 0.8rem;
+				}
+
+				> small {
+					background-color: $main-color;
+					color: $bg-color;
+					padding: 4px 8px;
+					margin-top: 4px;
+				}
+			}
+
+		}
+
+	}
+}
+// End Articles Section

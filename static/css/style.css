@@ -1,17 +1,190 @@
-/* Start Global Rules */
-* {
-	box-sizing: border-box !important;
-	margin: 0px;
-	padding: 0px;
-}
+/* line 8, ../sass/style.scss */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #1c1c1c;
+  background-color: #f1f1f1; }
 
-*:focus {
-	outline: none;	
-}
+/* line 15, ../sass/style.scss */
+header {
+  width: 100%; }
+  /* line 18, ../sass/style.scss */
+  header > .container {
+    padding: 0px 16px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 16px; }
+    @media (max-width: 992px) {
+      /* line 18, ../sass/style.scss */
+      header > .container {
+        padding: 0px 48px; } }
+    /* line 22, ../sass/style.scss */
+    header > .container .logo {
+      padding: 16px 0px;
+      font-weight: 400;
+      font-size: 1.4rem; }
+    /* line 28, ../sass/style.scss */
+    header > .container .theme {
+      font-size: 1.2rem; }
+      /* line 31, ../sass/style.scss */
+      header > .container .theme > input {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none; }
+      /* line 38, ../sass/style.scss */
+      header > .container .theme label > .fa-moon {
+        display: inline-block; }
+      /* line 42, ../sass/style.scss */
+      header > .container .theme label > .fa-sun {
+        display: none; }
+      /* line 55, ../sass/style.scss */
+      header > .container .theme label > i {
+        cursor: pointer; }
 
-html {
-	scroll-behavior: smooth;
-}
+/* line 65, ../sass/style.scss */
+section.profile {
+  width: 100%; }
+  /* line 68, ../sass/style.scss */
+  section.profile > .container {
+    padding: 0px 16px;
+    margin: auto; }
+    @media (max-width: 992px) {
+      /* line 68, ../sass/style.scss */
+      section.profile > .container {
+        padding: 0px 48px; } }
+    /* line 71, ../sass/style.scss */
+    section.profile > .container .banner {
+      background: url("../images/banner.webp") no-repeat center center;
+      background-size: cover;
+      min-height: 300px;
+      position: relative; }
+      /* line 77, ../sass/style.scss */
+      section.profile > .container .banner > img {
+        border-radius: 50%;
+        border: 10px #f1f1f1 solid;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        translate: -50% 50%;
+        aspect-ratio: 1 / 1;
+        width: 110px;
+        -o-object-fit: cover;
+           object-fit: cover; }
+    /* line 90, ../sass/style.scss */
+    section.profile > .container .info {
+      padding: 80px 0px 40px 0px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      gap: 8px;
+      position: relative;
+      text-align: center; }
+      /* line 96, ../sass/style.scss */
+      section.profile > .container .info:after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: #1c1c1c;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.4; }
+      /* line 108, ../sass/style.scss */
+      section.profile > .container .info > span {
+        font-weight: 500;
+        font-size: 1.2rem; }
+      /* line 113, ../sass/style.scss */
+      section.profile > .container .info > .social-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        gap: 8px;
+        font-size: 1.2rem; }
 
-
-
+/* line 123, ../sass/style.scss */
+section.articles {
+  width: 100%;
+  padding: 32px 0px; }
+  /* line 127, ../sass/style.scss */
+  section.articles > .container {
+    padding: 0px 16px;
+    margin: auto; }
+    @media (max-width: 992px) {
+      /* line 127, ../sass/style.scss */
+      section.articles > .container {
+        padding: 0px 48px; } }
+    /* line 130, ../sass/style.scss */
+    section.articles > .container > .title {
+      font-weight: 500;
+      font-size: 2.078rem; }
+    /* line 135, ../sass/style.scss */
+    section.articles > .container > .articles {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 48px; }
+      /* line 139, ../sass/style.scss */
+      section.articles > .container > .articles > div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+        gap: 8px; }
+        /* line 142, ../sass/style.scss */
+        section.articles > .container > .articles > div > img {
+          aspect-ratio: 4 / 3;
+          -o-object-fit: cover;
+             object-fit: cover; }
+        /* line 147, ../sass/style.scss */
+        section.articles > .container > .articles > div > span {
+          font-weight: 500;
+          font-size: 1.2rem; }
+        /* line 152, ../sass/style.scss */
+        section.articles > .container > .articles > div > p {
+          font-size: 0.8rem; }
+        /* line 156, ../sass/style.scss */
+        section.articles > .container > .articles > div > small {
+          background-color: #1c1c1c;
+          color: #f1f1f1;
+          padding: 4px 8px;
+          margin-top: 4px; }
