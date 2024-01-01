@@ -33,24 +33,6 @@ header {
 			}
 
 			label {
-				// Icon Appearence
-				@if $theme == "light" {
-					> .fa-moon {
-						display: inline-block;
-					}
-
-					> .fa-sun {
-						display: none;
-					}
-				} @else {
-					> .fa-moon {
-						display: none;
-					}
-
-					> .fa-sun {
-						display: inline-block;
-					}
-				}
 
 				> i {
 					cursor: pointer;

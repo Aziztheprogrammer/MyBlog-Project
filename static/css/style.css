@@ -42,12 +42,6 @@ header {
         -webkit-appearance: none;
            -moz-appearance: none;
                 appearance: none; }
-      /* line 38, ../sass/style.scss */
-      header > .container .theme label > .fa-moon {
-        display: inline-block; }
-      /* line 42, ../sass/style.scss */
-      header > .container .theme label > .fa-sun {
-        display: none; }
       /* line 55, ../sass/style.scss */
       header > .container .theme label > i {
         cursor: pointer; }
